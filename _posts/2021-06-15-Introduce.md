@@ -1,6 +1,6 @@
 ---
-title: 荔尽一生，枝爱一人
+title: Most important
 tags: TeXt
 ---
     
-嘻嘻嘻，小明我们要一直好好在一起哇！
+This is my first post,an i wish we can be together forever
