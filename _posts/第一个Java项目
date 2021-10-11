@@ -1,0 +1,20 @@
+---
+title: 上手第一个java项目
+tags: TeXt
+---
+    
+开发需求：三个文件，分别为
+  a.Nail Removed.asc --供应商提供的拔针确认文件
+  b.NailSet.asc --DFT提供的原始网络
+  c.Net Rename Report.txt --夹具开发过程中的重命名文件
+  
+具体开发逻辑：
+  1.读取b中的Netname,记为
+  2.在c中匹配1中的Netname，读取其右边的对应的修改过后的Rename
+  3.将2中生成的一维数组和a中的文件进行匹配，如果存在于a中则替换对应的Netname
+  4.将修改过的a输出为Nail Cannot Remove.asc文件，格式与a中保持一致
+  
+开发中需要考虑到的问题：
+  1.读取文件的存储格式，b和c都是二维数组的形式，数组中元素以string形式储存
+  2.元素匹配时，算法的复杂度优化
+  3.
