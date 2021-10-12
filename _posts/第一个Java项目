@@ -1,8 +1,10 @@
+
 ---
-title: 2021-10-11上手第一个java项目
-tags: TeXt
----
-    
+layout: 2021-10-11-第一个java项目.md
+title: Document - Writing Posts
+mathjax: true
+---   
+
 开发需求：三个文件，分别为
   a.Net Rename Report.txt --开发过程中的重命名文件
     V33_F                                             V33_F
