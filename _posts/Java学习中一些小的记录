@@ -1,0 +1,26 @@
+---
+title: 记录
+tags: TeXt
+layout: home
+---
+
+##一些数据类型
+List：有序的元素集合，可以通过索引访问；元素是可以重复的  
+
+ArrayList：长度可变的数组，可以对元素进行随机的访问，插入和删除元素的速度较慢  
+
+LinkList：采用链表数据结构，插入和删除速度很快，但是访问较慢  
+
+Set：无序、不可重复的数据,同样允许null值得存在，但是最多只能有一个null值  
+
+HashSet：按照哈希算法取集合中的对象，存取速度比较快  
+
+TreeSet：实现了SortSet接口，能够对集合中的对象进行排序
+
+Map：常用的实现类是Hashmap和Treemap  
+
+HashMap：基于散列表实现，插入和查询的开销是固定的，可以通过构造设置容量和负载因子来调整容器的性能  
+
+TreeMap：基于红黑树实现。查看<k,v>时，会被排序。TreeMap是唯一带有subMap()方法的Map，可以返回一个子树。  
+
+一个golang学习的网站——https://www.golangroadmap.com/
