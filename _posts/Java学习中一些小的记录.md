@@ -26,7 +26,7 @@ TreeMap：基于红黑树实现。查看<k,v>时，会被排序。TreeMap是唯�
 一个golang学习的网站——https://www.golangroadmap.com/
 
 原始文件格式  
-'''
+```
 PART                     TYPE                     PIN=NETNAME                                       NAIL
 S5000                    ANALOG                   1=BUTTON_RST_IN_N,                                F180
 S5000                    ANALOG                   2=_GND,                                           F3
@@ -46,10 +46,10 @@ U2                       HYBRID                   7=_75I11032_7_U5501,          
 U2                       HYBRID                   8=_75I11032_7_U5501,                              F614
 U2                       HYBRID                   9=_GND,                                           F3
 U2                       HYBRID                   10=_GND,                                          F3
-'''
+
 
 目标格式
-'''
+
 PART                     TYPE                     PIN=NETNAME                                       NAIL
 S5000                    ANALOG                   1=BUTTON_RST_IN_N,                                F180
                                                   2=_GND,                                           F3
@@ -68,10 +68,12 @@ U2                       HYBRID                   1=ADS7953_GPIO2,              
                                                   7=_75I11032_7_U5501,                              F614
                                                   8=_75I11032_7_U5501,                              F614
                                                   9=_GND,                                           F3
-                                                  10=_GND,                                          F3
-''' 
+                                                  10=_GND,                                          F3   
+                                                  
+```
 代码
-'''java
+```java   
+
 public class GetPinsTest {
     @Test
     public void test() throws Exception {
@@ -101,5 +103,6 @@ public class GetPinsTest {
         List<String> oriPin =
                 valPin.stream()
                         .map(Objects::toString)
-                        .collect(Collectors.toList());
-'''
+                        .collect(Collectors.toList());   
+                        
+```
