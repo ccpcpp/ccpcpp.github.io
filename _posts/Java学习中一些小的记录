@@ -70,3 +70,35 @@ U2                       HYBRID                   1=ADS7953_GPIO2,              
                                                   9=_GND,                                           F3
                                                   10=_GND,                                          F3
 --
+--java
+public class GetPinsTest {
+    @Test
+    public void test() throws Exception {
+        SqliteDao sqliteDao = new SqliteDao("D:\\Program Files\\SQLiteStudio\\197480242133209088_ts.db3");
+        List<TelPinEntity> telPin = sqliteDao.getDao(TelPinEntity.class).queryForAll();
+        List<TelNetEntity> telNet = sqliteDao.getDao(TelNetEntity.class).queryForAll();
+        List<ValPinEntity> valPin = sqliteDao.getDao(ValPinEntity.class).queryForAll();
+        List<NetNailEntity> NetNail = sqliteDao.getDao(NetNailEntity.class).queryForAll();
+        Map<String, String> newNetName =
+                telNet.stream()
+                        .collect(
+                                Collectors.toMap(
+                                        TelNetEntity::getNetName, TelNetEntity::getNewNetName, (e1, e2) -> e1));
+        Map<String, String> nameToNail =
+                telPin.stream()
+                        .collect(
+                                Collectors.toMap(
+                                        TelPinEntity::getNetName, TelPinEntity::getPinNoDetail, (e1, e2) -> e1));
+        Map<String, String> nailToConn =
+                NetNail.stream()
+                        .collect(
+                                Collectors.toMap(
+                                        NetNailEntity::getNailNum, NetNailEntity::getConn));
+        Set<String> partRef = valPin.stream().map(ValPinEntity::getPartRef).distinct().collect(Collectors.toSet());
+        Field[] field = ValPinEntity.class.getDeclaredFields();
+
+        List<String> oriPin =
+                valPin.stream()
+                        .map(Objects::toString)
+                        .collect(Collectors.toList());
+--
