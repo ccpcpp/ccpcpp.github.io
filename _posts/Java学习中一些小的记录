@@ -24,3 +24,49 @@ HashMap：基于散列表实现，插入和查询的开销是固定的，可以�
 TreeMap：基于红黑树实现。查看<k,v>时，会被排序。TreeMap是唯一带有subMap()方法的Map，可以返回一个子树。  
 
 一个golang学习的网站——https://www.golangroadmap.com/
+
+原始文件格式  
+--
+PART                     TYPE                     PIN=NETNAME                                       NAIL
+S5000                    ANALOG                   1=BUTTON_RST_IN_N,                                F180
+S5000                    ANALOG                   2=_GND,                                           F3
+S5000                    ANALOG                   3=_GND,                                           F3
+S5000                    ANALOG                   4=_GND,                                           F3
+S5000                    ANALOG                   5=_GND,                                           F3
+S5000                    ANALOG                   6=_GND;                                           F3
+R4000                    RES                      1=_22N5209,                                       
+R4000                    RES                      2=_22N5205;                                       
+U2                       HYBRID                   1=ADS7953_GPIO2,                                  F597
+U2                       HYBRID                   2=ADS7953_GPIO3,                                  F598
+U2                       HYBRID                   3=_GND,                                           F3
+U2                       HYBRID                   4=_75I11032_AD7953_REF,                           F535
+U2                       HYBRID                   5=_75I11032V3V3ADS7953,                           F527
+U2                       HYBRID                   6=_GND,                                           F3
+U2                       HYBRID                   7=_75I11032_7_U5501,                              F614
+U2                       HYBRID                   8=_75I11032_7_U5501,                              F614
+U2                       HYBRID                   9=_GND,                                           F3
+U2                       HYBRID                   10=_GND,                                          F3
+--
+
+目标格式
+--
+PART                     TYPE                     PIN=NETNAME                                       NAIL
+S5000                    ANALOG                   1=BUTTON_RST_IN_N,                                F180
+                                                  2=_GND,                                           F3
+                                                  3=_GND,                                           F3
+                                                  4=_GND,                                           F3
+                                                  5=_GND,                                           F3
+                                                  6=_GND;                                           F3
+R4000                    RES                      1=_22N5209,                                       
+                                                  2=_22N5205;                                       
+U2                       HYBRID                   1=ADS7953_GPIO2,                                  F597
+                                                  2=ADS7953_GPIO3,                                  F598
+                                                  3=_GND,                                           F3
+                                                  4=_75I11032_AD7953_REF,                           F535
+                                                  5=_75I11032V3V3ADS7953,                           F527
+                                                  6=_GND,                                           F3
+                                                  7=_75I11032_7_U5501,                              F614
+                                                  8=_75I11032_7_U5501,                              F614
+                                                  9=_GND,                                           F3
+                                                  10=_GND,                                          F3
+--
