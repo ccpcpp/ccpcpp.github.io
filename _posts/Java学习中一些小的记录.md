@@ -4,7 +4,8 @@ tags: TeXt
 layout: home
 ---
 
-##一些数据类型
+## 一些数据类型  
+
 List：有序的元素集合，可以通过索引访问；元素是可以重复的  
 
 ArrayList：长度可变的数组，可以对元素进行随机的访问，插入和删除元素的速度较慢  
@@ -23,7 +24,7 @@ HashMap：基于散列表实现，插入和查询的开销是固定的，可以�
 
 TreeMap：基于红黑树实现。查看<k,v>时，会被排序。TreeMap是唯一带有subMap()方法的Map，可以返回一个子树。  
 
-一个golang学习的网站——https://www.golangroadmap.com/
+## 一个golang学习的网站——https://www.golangroadmap.com/
 
 原始文件格式  
 ```
